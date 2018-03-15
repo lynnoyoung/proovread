@@ -15,12 +15,12 @@ clean:
 
 util:
 	git submodule init
-	git submodule update --force
+	git submodule update
 	cd util/bwa && make
 
 update:
 	git pull
-	git submodule update --recursive --force
+	git submodule update --recursive
 	cd util/bwa && make clean && make
 
 documentation:
